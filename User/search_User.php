@@ -17,7 +17,7 @@
 <body>
     <div id="create_section" class="mt-3 border border-gray-900 p-5 rounded-lg mx-5">
         <h1 class="text-center underline text-3xl mb-3 font-bold">View User Details Form</h1>
-        <form action="search_action.php" method="post">
+        <div >
             <div class="flex gap-x-20 border border-gray-500 p-5 rounded-md flex-wrap ">
                 <div class="">
                     <div class="flex gap-x-20 flex-wrap">
@@ -26,9 +26,9 @@
                                 class=" block mb-2 font-bold text-xs font-medium text-gray-900 dark:text-white">User
                                 Name :
                             </label>
-                            <input type="text" name="user_name"
+                            <input type="text" name="user_name" id="user_name"
                                 class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                            <button type="submit"
+                            <button type="submit" onclick="getUSerDataByUserName()"
                                 class="py-1.5 px-3 ms- text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 20 20">
@@ -46,7 +46,7 @@
                             </label>
                             <input type="text" name="peron_id"
                                 class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                                <button type="button"
+                            <button type="button"
                                 class="py-1.5 px-3 ms- text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 20 20">
@@ -64,7 +64,7 @@
                             </label>
                             <input type="text" name="peron_id"
                                 class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                                <button type="button"
+                            <button type="button"
                                 class="py-1.5 px-3 ms- text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 20 20">
@@ -84,15 +84,17 @@
                             <label
                                 class="block mb-2 font-bold text-xs font-medium text-gray-900 dark:text-white">Passowrd
                                 : </label>
-                            <input type="text" name="password" value="<?php echo $mobile_no; ?>"
-                                class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md " disabled />
+                            <input type="text" name="password" id="password" 
+                                    class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md "
+                                disabled />
                         </div>
                         <div class="">
                             <label
                                 class="block mb-2 font-bold text-xs font-medium text-gray-900 dark:text-white">Description
                                 : </label>
-                            <input type="text" name="description"
-                                class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                            <input type="text" name="description" id="description"
+                                class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                disabled />
                         </div>
                     </div>
                     <div class="flex gap-x-20 flex-wrap">
@@ -101,16 +103,18 @@
                                 Number
                                 :
                             </label>
-                            <input type="text" name="mobile_no"
-                                class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled/>
+                            <input type="text" name="mobile_no" id="mobile_no"
+                                class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                disabled />
                         </div>
 
                         <div class="">
                             <label class="block mb-2 font-bold text-xs font-medium text-gray-900 dark:text-white">Email
                                 Id
                                 : </label>
-                            <input type="text" name="emai_id"
-                                class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled/>
+                            <input type="text" name="emai_id" id="emai_id"
+                                class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                disabled />
                         </div>
                     </div>
                 </div>
@@ -123,14 +127,16 @@
                         <div class="">
                             <label class="block mb-2 font-bold text-xs font-medium text-gray-900 dark:text-white">
                                 Effective From Date : </label>
-                            <input type="date" name="effective_from_date"
-                                class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled/>
+                            <input type="date" name="effective_from_date" id="effective_from_date"
+                                class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                disabled />
                         </div>
                         <div class="">
                             <label class="block mb-2 font-bold text-xs font-medium text-gray-900 dark:text-white">
                                 Effective To Date : </label>
-                            <input type="date" name="effective_to_date"
-                                class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled/>
+                            <input type="date" name="effective_to_date" id="effective_to_date"
+                                class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                disabled />
                         </div>
                     </div>
                 </div>
@@ -142,10 +148,11 @@
 
                 <div class="">
                     <input type="radio" name="password" id="" class="mr-3" disabled>
-                    <label class="w-14 inline-block mb-2 font-bold text-xs font-medium text-gray-900 dark:text-white"  >
+                    <label class="w-14 inline-block mb-2 font-bold text-xs font-medium text-gray-900 dark:text-white">
                         Days : </label>
-                    <input type="text" name="days" 
-                        class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled/>
+                    <input type="text" name="days"
+                        class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                        disabled />
                 </div>
 
                 <!-- <div class="">
@@ -255,17 +262,20 @@
                                             User Creation Form
                                         </th>
                                         <td class="px-10 py-4">
-                                            <input name="user_creation" type="checkbox" value=""
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" disabled>
+                                            <input name="user_creation" id="user_creation" type="checkbox" value=""
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                                disabled>
 
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="user_creation_from_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="user_creation_to_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
 
                                     </tr>
@@ -275,17 +285,20 @@
                                             User Search Form
                                         </th>
                                         <td class="px-10 py-4">
-                                            <input name="user_search" type="checkbox" value=""
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" disabled>
+                                            <input name="user_search" id="user_search" type="checkbox" value=""
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                                disabled>
 
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="user_search_from_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="user_search_to_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -294,17 +307,20 @@
                                             View User Report
                                         </th>
                                         <td class="px-10 py-4">
-                                            <input name="user_report" type="checkbox" value=""
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" disabled>
+                                            <input name="user_report" id="user_report" type="checkbox" value=""
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                                disabled>
 
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="user_report_from_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="user_report_to_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -313,17 +329,20 @@
                                             Membership Create
                                         </th>
                                         <td class="px-10 py-4">
-                                            <input name="membership_create" type="checkbox" value=""
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" disabled>
+                                            <input name="membership_create" id="membership_create" type="checkbox" value=""
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                                disabled>
 
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="membership_create_from_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="membership_create_to_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -332,17 +351,20 @@
                                             Membership Search
                                         </th>
                                         <td class="px-10 py-4">
-                                            <input name="membership_search" type="checkbox" value=""
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" disabled>
+                                            <input name="membership_search" id="membership_search" type="checkbox" value=""
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                                disabled>
 
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="membership_search_from_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="membership_search_to_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -351,17 +373,20 @@
                                             View Membership Report
                                         </th>
                                         <td class="px-10 py-4">
-                                            <input name="membership_report" type="checkbox" value=""
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" disabled>
+                                            <input name="membership_report" id="membership_report" type="checkbox" value=""
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                                disabled>
 
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="membership_report_from_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="membership_report_to_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -370,17 +395,20 @@
                                             Membership Receipt Creation
                                         </th>
                                         <td class="px-10 py-4">
-                                            <input name="receipt_creation" type="checkbox" value=""
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" disabled>
+                                            <input name="receipt_creation" id="receipt_creation" type="checkbox" value=""
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                                disabled>
 
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="receipt_creation_from_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="receipt_creation_to_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -389,17 +417,20 @@
                                             Membership Receipt Search
                                         </th>
                                         <td class="px-10 py-4">
-                                            <input name="receipt_search" type="checkbox" value=""
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" disabled>
+                                            <input name="receipt_search" id="receipt_search" type="checkbox" value=""
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                                disabled>
 
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="receipt_search_from_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="receipt_search_to_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled />
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -408,17 +439,20 @@
                                             View Membership Receipt Report
                                         </th>
                                         <td class="px-10 py-4">
-                                            <input name="receipt_report" type="checkbox" value=""
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" disabled>
+                                            <input name="receipt_report" id="receipt_report" type="checkbox" value=""
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                                disabled>
 
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="receipt_report_from_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled/>
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                         <td class="px-10 py-4">
                                             <input type="date" name="receipt_report_to_date"
-                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" disabled/>
+                                                class="w-40 rounded-md text-xs bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                                disabled />
                                         </td>
                                     </tr>
                                 </tbody>
@@ -471,12 +505,12 @@
                         Now</button>
                 </div> -->
             </div>
-        </form>
+        </div>
     </div>
 
 
 
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

@@ -33,7 +33,7 @@
                             <label
                                 class="block mb-2 font-bold text-xs font-medium text-gray-900 dark:text-white">Passowrd
                                 : </label>
-                            <input type="text" name="password"
+                            <input type="text" name="user_password"
                                 class="w-40 rounded-md border text-xs border-gray-500 mb-3 bg-white py-3 pl-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" />
                         </div>
                     </div>

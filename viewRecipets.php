@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </label>
                     <input type="number" name="membership_no" id="membership_no"
 
-                    value="<?php echo isset($membership_id)?$membership_id :""  ?>"
+                    value="<?php echo isset($membership_id)?$membership_id :""  ?>" 
                         class=" w-60 rounded-md border h-8 mb-3 text-xs border-gray-500 bg-white py-3 p-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" />
 
 

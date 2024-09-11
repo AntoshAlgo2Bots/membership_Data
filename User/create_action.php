@@ -14,7 +14,7 @@ echo "Connected successfully <br>";
 
 
 $user_name = $_POST['user_name'];
-$password = $_POST['password'];
+$password = $_POST['user_password']; 
 $mobile_no = $_POST['mobile_no'];
 $emai_id = $_POST['emai_id'];
 $effective_from_date = $_POST['effective_from_date'];
