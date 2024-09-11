@@ -159,7 +159,7 @@
                                 class="block  mb-1 font-bold text-xs font-medium text-gray-900 dark:text-white">Next
                                 Amount Due :
                             </label>
-                            <input type="date" id="next_amount_due" name="next_amount_due"
+                            <input type="nu" id="next_amount_due" name="next_amount_due"
                                 class="hidden w-60 rounded-md border h-8 mb-3 text-xs border-gray-500 bg-white py-3 p-2 text-[#6B7280] h-6 outline-none focus:border-[#6A64F1] focus:shadow-md" />
                         </div>
                         <div>
@@ -221,8 +221,128 @@
             </div> -->
         </form>
 
+
+
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="dataTableFees" class="mt-3  hidden  p-5 rounded-lg mx-5">
+        <h1 class="text-center underline uppercase text-3xl mb-2 font-bold">View Financial Year Fees</h1>
+
+
+
+
+        <div class="relative  overflow-x-auto mt-5" id="">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Member
+                            ship ( New/ Renew)
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Year
+                            of Membership
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            One Time
+                            Enrollment fee
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Yearly
+                            Charges
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Share Allocated
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Total Amount
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="SubmitedRowDataInTableBody">
+                    <!-- <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            New
+                        </th>
+                        <td class="px-6 py-4">
+                            2020-21
+                        </td>
+                        <td class="px-6 py-4">
+                            20000
+                        </td>
+                        <td class="px-6 py-4">
+                            1200
+                        </td>
+                        <td class="px-6 py-4">
+                            67
+                        </td>
+                        <td class="px-6 py-4">
+                            22000
+                        </td>
+                    </tr> -->
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <center>
+        <button type="submit"
+        class="text-white border border-blue-700 bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-xs px-5 py-2.5 text-center me-2 mb-1 font-bold dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800 ">Submit</button>
+        </center>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
     <!-- <script>
         $(document).ready(function () {

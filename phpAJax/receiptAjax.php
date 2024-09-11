@@ -51,7 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
 
-            };
+            }
+            ;
 
 
 
@@ -121,7 +122,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
 
-            };
+            }
+            ;
 
 
 
@@ -223,7 +225,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
 
-        $sql = "SELECT * FROM membership_project.financial_year_fees where membership_type=  '$ membershipType' ;";
+        $sql = "SELECT * FROM membership_project.financial_year_fees where membership_type=  '$membershipType' ;";
 
 
 
@@ -281,6 +283,78 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
     }
+
+
+
+
+
+    if (isset($_GET['updateSubmitData'])) {
+
+
+
+
+        $rowIds = $_GET['checkedRowId'];
+
+
+
+
+        foreach ($rowIds as $key => $value) {
+
+
+
+            $sql = "UPDATE `membership_project`.`receipt_details` SET `recieipt_form_status` = 'SUBMIT' WHERE (`id` = '$value');";
+
+
+
+
+            $result = mysqli_query($conn, $sql);
+
+            if ($result) {
+
+                $response['success'] = true;
+                $response['message'] = "SUbmitted  success fully ";
+
+            } else {
+                $response["success"] = false;
+                $response["message"] = mysqli_error($conn);
+
+            }
+
+
+            
+            
+
+            
+
+        }
+
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        echo json_encode($response);
+        
+        
+
+        
+
+        
+        
+        
+        
+        
+    }
+
+
+
+
+    
 
 
 

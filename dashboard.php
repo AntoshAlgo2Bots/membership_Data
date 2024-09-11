@@ -134,6 +134,7 @@
             <div class="w-3/4 border border-gray-700">
                 <div id="divId"></div>
                 <div class="datachart bg-gray-100 " style="width:26rem; height:17rem" id="receipt_details"></div>
+                <div class="datachart bg-gray-100 " style="width:26rem; height:17rem" id="paidMmbersByYear"></div>
             </div>
         </div>
     </div>

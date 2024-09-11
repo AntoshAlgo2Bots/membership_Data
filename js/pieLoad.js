@@ -68,16 +68,29 @@ $(document).ready(function () {
       console.log(data);
 
       let receipt_details = data.receipt_details.Indexes;
-      // let itemrequest = data.itemrequest.Indexes;
-      // let requisition_table = data. requisition_table.Indexes;
+      let activeMembership = data.activeMembership.Indexes;
+      let paidMmbersByYear = data.paidMmbersByYear.Indexes;
+      let paidUnpaidByYear = data.paidUnpaidByYear
+      let paidStatements = data.paidStatements
       // let grnStatus = data.grnStatus.Indexes;
 
       //   console.log(purchase_order);
 
       // await setDataOfPie(requisition_table, "PR Requests", "pr_requests");
       await setDataOfPie(receipt_details, "Membership Statics", "receipt_details");
-      // await setDataOfPie(itemrequest, "Item Request", "item_requests");
-      // await setDataOfPie(grnStatus, "GRN status", "GRN_status");
+      await setDataOfPie(activeMembership, "Active members", "activeMembership");
+      await setDataOfPie(paidMmbersByYear, "Year by reciept created", "paidMmbersByYear");
+      await setDataOfPie(paidUnpaidByYear, "Statics By year", "paidUnpaidByYear");
+      await setDataOfPie(paidStatements, "Statics By year", "paidStatements");
+
+
+      
+
+
+
+
+
+      
     },
     "json"
   ).fail(error=>{

@@ -36,7 +36,7 @@
                     <div class="p-4 mb-2">
                         <h5
                             class="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                            Sidebar
+                            Forms.
                         </h5>
                     </div>
                     <nav
@@ -316,7 +316,7 @@
                         </div>
                         
                         <hr class="my-2 border-blue-gray-50" />
-                        <div role="button"
+                        <!-- <div role="button"
                             class="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
                             <div class="grid mr-4 place-items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -333,7 +333,7 @@
                                     <span class="">14</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div role="button"
                             class="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
                             <div class="grid mr-4 place-items-center">
@@ -358,7 +358,8 @@
                             </div>
                             Settings
                         </div>
-                        <div role="button"
+                        <a role="button"
+                        href="./logout.php"
                             class="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
                             <div class="grid mr-4 place-items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -367,7 +368,7 @@
                                         d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z"
                                         clip-rule="evenodd"></path>
                                 </svg>
-                            </div>
+                            </a>
                             Log Out
                         </div>
                     </nav>
@@ -376,10 +377,13 @@
 
 
 
-                <div class="w-3/4 border border-gray-2  00">
+                <div class="w-full border flex flex-wrap justify-center border-gray-2  00">
                     
-                    <div class="datachart bg-gray-100 " style="width:26rem; height:17rem" id="receipt_details"></div>
-                    <div class="datachart bg-gray-100 " style="width:26rem; height:17rem" id="activeMembership"></div>
+                    <div class="datachart border-2 bg-gray-100 " style="width:26rem; height:17rem" id="receipt_details"></div>
+                    <div class="datachart border-2 bg-gray-100 " style="width:26rem; height:17rem" id="activeMembership"></div>
+                    <div class="datachart border-2 bg-gray-100 " style="width:26rem; height:17rem" id="paidMmbersByYear"></div>
+                    <div class="datachart border-2 bg-gray-100 " style="width:26rem; height:17rem" id="paidUnpaidByYear"></div>
+                    <div class="datachart border-2 bg-gray-100 " style="width:26rem; height:17rem" id="paidStatements"></div>
                 </div>
 
 
@@ -398,124 +402,124 @@
 
 
 
-<!-- 
-        <div class="w-full flex border border-gray-700" style=" ">
-            <div class="w-1/4  custom-main-dash">
+    <!-- 
+            <div class="w-full flex border border-gray-700" style=" ">
+                <div class="w-1/4  custom-main-dash">
 
-                <div style=" background-color: #FF9874; min-height:100vh;"
-                    class="p-4 whitespace-nowrap 	mx-3 flex flex-col rounded">
+                    <div style=" background-color: #FF9874; min-height:100vh;"
+                        class="p-4 whitespace-nowrap 	mx-3 flex flex-col rounded">
 
 
-                    <h1 class="font-bold text-2xl border-b-2 text-center uppercase"> Forms </h1>
+                        <h1 class="font-bold text-2xl border-b-2 text-center uppercase"> Forms </h1>
 
-                    <div>
-                        <button type="button"
-                            class="text-black w-full mt-3 bg-white flex justify-between focus:outline-none font-medium rounded-t-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            aria-controls="dropdown-example1" data-collapse-toggle="dropdown-example1">
-                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Form</span>
-                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
-                        <ul id="dropdown-example1" class="hidden py-2 space-y-2 bg-gray-100 w-full rounded-b-lg">
-                            <li>
-                                <a href="./User/create_User.php"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">User
-                                    Creation Form </a>
-                            </li>
-                            <li>
-                                <a href="./User/search_User.php"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">User
-                                    Search Report</a>
-                            </li>
-                        </ul>
+                        <div>
+                            <button type="button"
+                                class="text-black w-full mt-3 bg-white flex justify-between focus:outline-none font-medium rounded-t-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                aria-controls="dropdown-example1" data-collapse-toggle="dropdown-example1">
+                                <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Form</span>
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <ul id="dropdown-example1" class="hidden py-2 space-y-2 bg-gray-100 w-full rounded-b-lg">
+                                <li>
+                                    <a href="./User/create_User.php"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">User
+                                        Creation Form </a>
+                                </li>
+                                <li>
+                                    <a href="./User/search_User.php"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">User
+                                        Search Report</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button type="button"
+                                class="text-black w-full mt-3 bg-white flex justify-between focus:outline-none font-medium rounded-t-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                aria-controls="dropdown-example2" data-collapse-toggle="dropdown-example2">
+                                <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Membership Form</span>
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <ul id="dropdown-example2" class="hidden py-2 space-y-2 bg-gray-100 w-full rounded-b-lg">
+                                <li>
+                                    <a href="./membership/create_Membership.php"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Membership
+                                        Creation Form </a>
+                                </li>
+                                <li>
+                                    <a href="./membership/search_Membership.php"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Membership
+                                        Search Report</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button type="button"
+                                class="text-black w-full mt-3 bg-white flex justify-between focus:outline-none font-medium rounded-t-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                aria-controls="dropdown-example3" data-collapse-toggle="dropdown-example3">
+                                <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Membership Receipt
+                                </span>
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <ul id="dropdown-example3" class="hidden py-2 space-y-2 bg-gray-100 w-full rounded-b-lg">
+                                <li>
+                                    <a href="./Receipt/create_Receipt.php"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Receipt
+                                        Creation Form </a>
+                                </li>
+                                <li>
+                                    <a href="./Receipt/search_Receipt.php"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Receipt
+                                        Search Report</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+
+                            <button type="button"
+                                class="text-black w-full mt-3 bg-white flex justify-between focus:outline-none font-medium rounded-t-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                aria-controls="dropdown-example4" data-collapse-toggle="dropdown-example4">
+                                <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Define fees
+                                </span>
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <ul id="dropdown-example4" class="hidden py-2 space-y-2 bg-gray-100 w-full rounded-b-lg">
+                                <li>
+                                    <a href="./search_year_table.php"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                        Search Year Table </a>
+                                </li>
+                                <li>
+                                    <a href="./year_table.php"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Year
+                                        fees creation</a>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
-                    <div>
-                        <button type="button"
-                            class="text-black w-full mt-3 bg-white flex justify-between focus:outline-none font-medium rounded-t-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            aria-controls="dropdown-example2" data-collapse-toggle="dropdown-example2">
-                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Membership Form</span>
-                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
-                        <ul id="dropdown-example2" class="hidden py-2 space-y-2 bg-gray-100 w-full rounded-b-lg">
-                            <li>
-                                <a href="./membership/create_Membership.php"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Membership
-                                    Creation Form </a>
-                            </li>
-                            <li>
-                                <a href="./membership/search_Membership.php"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Membership
-                                    Search Report</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <button type="button"
-                            class="text-black w-full mt-3 bg-white flex justify-between focus:outline-none font-medium rounded-t-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            aria-controls="dropdown-example3" data-collapse-toggle="dropdown-example3">
-                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Membership Receipt
-                            </span>
-                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
-                        <ul id="dropdown-example3" class="hidden py-2 space-y-2 bg-gray-100 w-full rounded-b-lg">
-                            <li>
-                                <a href="./Receipt/create_Receipt.php"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Receipt
-                                    Creation Form </a>
-                            </li>
-                            <li>
-                                <a href="./Receipt/search_Receipt.php"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Receipt
-                                    Search Report</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-
-                        <button type="button"
-                            class="text-black w-full mt-3 bg-white flex justify-between focus:outline-none font-medium rounded-t-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            aria-controls="dropdown-example4" data-collapse-toggle="dropdown-example4">
-                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Define fees
-                            </span>
-                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
-                        <ul id="dropdown-example4" class="hidden py-2 space-y-2 bg-gray-100 w-full rounded-b-lg">
-                            <li>
-                                <a href="./search_year_table.php"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                    Search Year Table </a>
-                            </li>
-                            <li>
-                                <a href="./year_table.php"
-                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Year
-                                    fees creation</a>
-                            </li>
-                        </ul>
-                    </div>
-
                 </div>
-            </div>
 
-            <div class="w-3/4 border border-gray-700">
-                <div id="divId"></div>
-                <div class="datachart bg-gray-100 " style="width:26rem; height:17rem" id="receipt_details"></div>
-            </div>
-        </div> -->
+                <div class="w-3/4 border border-gray-700">
+                    <div id="divId"></div>
+                    <div class="datachart bg-gray-100 " style="width:26rem; height:17rem" id="receipt_details"></div>
+                </div>
+            </div> -->
     </div>
 
 </body>
